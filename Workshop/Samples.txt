@@ -1,0 +1,40 @@
+**********************
+PowerShell transcript start
+Start time: 20251117090217
+Username: SRPCORP\JRINMAN
+RunAs User: SRPCORP\JRINMAN
+Configuration Name: 
+Machine: NBESP93505GY (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoExit -Command & { Import-Module "$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll"; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\}
+Process ID: 25176
+PSVersion: 7.5.3
+PSEdition: Core
+GitCommitId: 7.5.3
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\Samples.txt
+ JRINMAN   Workshop   main≡  ?3 ~1   ]0;pwsh in Workshop 7                                         in pwsh at 09:02:178
+PS>alias cd
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           cd -> Set-Location
+
+ JRINMAN   Workshop   main≡  ?3 ~1   ]0;pwsh in Workshop 7                                         in pwsh at 09:07:518
+PS>alias pwd
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           pwd -> Get-Location
+
+ JRINMAN   Workshop   main≡  ?3 ~1   ]0;pwsh in Workshop 7                                         in pwsh at 09:08:448
+PS>stop-transcript
+**********************
+PowerShell transcript end
+End time: 20251117094440
+**********************

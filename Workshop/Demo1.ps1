@@ -1,4 +1,4 @@
-# Full-Day PowerShell Demo Script
+﻿# Full-Day PowerShell Demo Script
 # Write-Host commands removed, lab sections marked with comments
 
 #region 01 - Command Discovery
@@ -10,7 +10,34 @@ Get-Command *service*
 Get-Command -Verb Get
 Get-Service | Get-Member
 Get-Process | Get-Member
+
+# String notation:
+# Double quotes allow escape chars and Variables. Variables uses $($varName.Property) to show value of the property.
+# Single quotes is a literal.
+
 # Lab 1 goes here
+Get-Variable 
+Get-Variable Error | select-object -property *
+
+# | clip; will copy to the clipboard whatever is executed.
+<#
+
+Name        : Error
+Description : 
+Value       : {The term 'so' is not recognized as a name of a cmdlet, function, script file, or executable program.
+              Check the spelling of the name, or if a path was included, verify that the path is correct and try again., The term 'Get' is not recognized as a name of a cmdlet, function, script file, or executable program.
+              Check the spelling of the name, or if a path was included, verify that the path is correct and try again., Failed to update Help for the module(s) 'Dism, Get-NetView, Kds, NetQos, Pester, PKI, Whea, WindowsUpdate' with UI culture(s) {en-US} : One or more errors occurred. (Response status code does not indicate success: 404 (The requested content does not exist.).).
+              English-US help content is available and can be installed using: Update-Help -UICulture en-US., Failed to update Help for the module(s) 'Send-MailKitMessage' with UI culture(s) {en-US} : The value of the HelpInfoUri key in the module manifest must resolve to a container or root URL on a website where the help files are stored. The HelpInfoUri 'https://github.com/austineric/Send-MailKitMessage#usage' does not resolve to a container..
+              English-US help content is available and can be installed using: Update-Help -UICulture en-US.ΓÇª}
+Visibility  : Public
+Module      : 
+ModuleName  : 
+Options     : Constant
+Attributes  : {}
+
+#>
+
+
 #endregion
 
 #region 02 - Services and Processes
@@ -35,6 +62,30 @@ $dime + 1
 1 + $dime
 "10" + 1
 1 + "10"
+
+#new math
+"5" + 5 # = 55
+
+# Tee-Object ==> send to screen and to a file.
+
+<# NOTES:
+Copy commands and output:
+Start-Transcript .\Filename.txt 
+  Commands here...
+Stop-Transcript 
+
+1..10 is a short way of representing an array of ints 0-9
+Escape character in PowerShell is back-tick ` and not \ like in C#.
+Commands do NOT need to end in a semi-colon ;
+
+
+
+
+
+
+#>
+
+
 # Lab 2 goes here
 #endregion
 
